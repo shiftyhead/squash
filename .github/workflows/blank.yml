@@ -32,6 +32,12 @@ jobs:
         echo Add other actions to build,
         echo test, and deploy your project.
 
+    - name: Checkout
+      run: git checkout temp
+
+    - name: Checkout back
+      run: git checkout master
+
     - name: Get remote origin
       run: git remote get-url origin
 
@@ -52,6 +58,9 @@ jobs:
 
 #    - name: Reset
 #      run: git reset origin/master
+
+    - name: Merge
+        run: git merge temp
 
     - name: Add
       run: git add . --all
