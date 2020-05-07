@@ -33,7 +33,7 @@ jobs:
         echo test, and deploy your project.
 
     - name: Checkout
-      run: git checkout temp
+      run: git branch temp && git checkout temp
 
     - name: Checkout back
       run: git checkout master
