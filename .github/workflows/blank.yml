@@ -36,7 +36,7 @@ jobs:
       run: git remote get-url origin
 
     - name: Set remote origin
-      run: git remote set-url origin https://github.com/shiftyhead/squash_check.git
+      run: git remote set-url origin 'https://github.com/shiftyhead/squash_check.git'
 
     - name: Check remote origin
       run: git remote -v
