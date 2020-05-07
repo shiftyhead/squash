@@ -68,11 +68,11 @@ jobs:
     - name: Checkout remote
       run: git branch temp1 && git checkout temp1
 
-    - name: Add
-      run: git add . --all
-
-    - name: Commit
-      run: git commit
+#    - name: Add
+#      run: git add . --all
+#
+#    - name: Commit
+#      run: git commit
 
     - name: Push
       run: git push -f
