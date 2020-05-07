@@ -65,11 +65,14 @@ jobs:
     - name: Reset
       run: git reset origin/master
 
-#    - name: Add
-#      run: git add . --all
-#
-#    - name: Commit
-#      run: git commit
+    - name: Checkout remote
+      run: git branch temp1 && git checkout temp1
+
+    - name: Add
+      run: git add . --all
+
+    - name: Commit
+      run: git commit
 
     - name: Push
       run: git push -f
