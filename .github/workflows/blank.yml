@@ -41,9 +41,6 @@ jobs:
     - name: Check remote origin
       run: git remote -v
 
-    - name: Pull
-      run: git pull
-
     - name: Reset
       run: git reset origin/master
 
