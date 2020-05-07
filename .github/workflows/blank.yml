@@ -31,10 +31,32 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+
     - name: Get remote origin
       run: git remote get-url origin
+
+    - name: Set remote origin
+      run: git remote set-url origin ${{ secrets.GIT_PASS }}
+
+    - name: Check remote origin
+      run: git remote get-url origin
+
+    - name: Pull
+      run: git pull
+
+    - name: Reset
+      run: git reset origin/master
+
+    - name: Add
+      run: git add . --all
+
+    - name: Commit
+      run: git commit
+
+    - name: Push
+      run: git push
 #
-#        git remote set-url origin ${{ secrets.GIT_PASS }},
+#        ,
 #        git pull,
 #        git reset origin/master,
 #        git add . --all,
