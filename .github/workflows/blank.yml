@@ -28,7 +28,17 @@ jobs:
 
     # Runs a set of commands using the runners shell
     - name: Run a multi-line script
+      env:
+        other_git: ${{ secrets.OTHER_GIT }}
+        git_user: ${{ secrets.GIT_USER }}
+        git_pass: ${{ secrets.GIT_PASS }}
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
         git remote get-url origin
+        git remote set-url origin $git_pass
+        git pull
+        git reset origin/master
+        git add . --all
+        git commit
+        git push
