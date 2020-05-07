@@ -56,8 +56,8 @@ jobs:
     - name: Check remote origin
       run: git remote -v
 
-    - name: Pull
-      run: git pull
+#    - name: Pull
+#      run: git pull
 
     - name: Merge
       run: git merge temp
