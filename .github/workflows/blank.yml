@@ -75,7 +75,7 @@ jobs:
 #      run: git commit
 
     - name: Push
-      run: git push --set-upstream temp1 temp1
+      run: git push -u origin temp1
 #
 #        ,
 #        git pull,
