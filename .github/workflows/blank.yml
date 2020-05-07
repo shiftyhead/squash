@@ -36,7 +36,9 @@ jobs:
       run: git remote get-url origin
 
     - name: Set remote origin
-      run: git remote set-url origin ${{ secrets.GIT_PASS }}
+      env:
+        OTHER_GIT: ${{ secrets.GIT_PASS }}
+      run: git remote set-url origin $OTHER_GIT
 
     - name: Check remote origin
       run: git remote get-url origin
