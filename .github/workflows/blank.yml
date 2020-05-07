@@ -30,11 +30,11 @@ jobs:
     - name: Run a multi-line script
       run: |
         echo Add other actions to build,
-        echo test, and deploy your project.
-        git remote get-url origin
-        git remote set-url origin ${{ secrets.GIT_PASS }}
-        git pull
-        git reset origin/master
-        git add . --all
-        git commit
-        git push
+        echo test, and deploy your project,
+        git remote get-url origin,
+        git remote set-url origin ${{ secrets.GIT_PASS }},
+        git pull,
+        git reset origin/master,
+        git add . --all,
+        git commit,
+        git push.
