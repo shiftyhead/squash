@@ -60,7 +60,7 @@ jobs:
 #      run: git reset origin/master
 
     - name: Merge
-        run: git merge temp
+      run: git merge temp
 
     - name: Add
       run: git add . --all
