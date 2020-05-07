@@ -36,12 +36,10 @@ jobs:
       run: git remote get-url origin
 
     - name: Set remote origin
-#      env:
-#        OTHER_GIT: ${{ secrets.GIT_PASS }}
       run: git remote set-url origin https://github.com/shiftyhead/squash_check.git
 
     - name: Check remote origin
-      run: git remote get-url origin
+      run: git remote -v
 
     - name: Pull
       run: git pull
