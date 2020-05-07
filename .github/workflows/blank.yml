@@ -56,11 +56,11 @@ jobs:
     - name: Check remote origin
       run: git remote -v
 
-#    - name: Reset
-#      run: git reset origin/master
-
     - name: Merge
       run: git merge temp
+
+    - name: Reset
+      run: git reset origin/master
 
     - name: Add
       run: git add . --all
